@@ -16,6 +16,7 @@ const services = [
     details:
       "Our excavation services utilize state-of-the-art machinery including Tata Hitachi 210, Komatsu excavators with long-boom attachments. We handle foundation excavation, trenching, land clearing, and site preparation. Safety protocols include site surveys, utility mapping, and continuous monitoring. Typical timeframe: 1-4 weeks depending on project scope.",
     machinery: "Tata Hitachi 210, Komatsu PC210, Long-boom excavators",
+    image: "/heavy-excavator-working-on-construction-site.jpg",
   },
   {
     id: 2,
@@ -25,6 +26,7 @@ const services = [
     details:
       "Specialized demolition services using long-boom excavators with hydraulic attachments and rock breakers. We handle multi-storey buildings, industrial structures, and bridge demolitions. Our team conducts structural assessments, implements dust control measures, and ensures proper debris management. Safety certifications and insurance coverage included.",
     machinery: "Long-boom excavators, Hydraulic rock breakers, Debris handlers",
+    image: "/industrial-building-demolition-site.jpg",
   },
   {
     id: 3,
@@ -34,6 +36,7 @@ const services = [
     details:
       "Comprehensive infrastructure development including road construction, drainage systems, RCC guttering, creek restoration, and bridge works. We collaborate with municipal corporations and follow government specifications. Services include surveying, earthwork, concrete works, and finishing. Quality testing and compliance documentation provided.",
     machinery: "Road rollers, Pavers, Concrete mixers, Excavators, Dumpers",
+    image: "/road-construction-infrastructure-site.jpg",
   },
   {
     id: 4,
@@ -43,6 +46,7 @@ const services = [
     details:
       "Equipment rental services with experienced operators. Fleet includes Komatsu and CAT bulldozers, JCB loaders, 10-12 wheel tippers, and vibromax road rollers. Daily, weekly, and monthly rental options available. All machines are regularly serviced and certified. Operator training, fuel, and maintenance included in rental packages.",
     machinery: "Bulldozers (D65, D85), Loaders, Tippers, Road rollers",
+    image: "/bulldozer-on-construction-site.jpg",
   },
   {
     id: 5,
@@ -52,6 +56,7 @@ const services = [
     details:
       "Specialized amphibious excavators for water body maintenance. Services include creek dredging, pond desilting, marsh clearing, and wetland restoration. Our pontoon-mounted excavators access difficult terrains and work in shallow to medium-depth water bodies. Environmental compliance and proper silt disposal management included.",
     machinery: "Amphibious excavators with pontoons, Dredging attachments",
+    image: "/amphibious-excavator-dredging-water.jpg",
   },
   {
     id: 6,
@@ -61,6 +66,7 @@ const services = [
     details:
       "Hard rock excavation using specialized equipment including vibrorippers, hydraulic rock breakers, and heavy-duty excavators. We handle foundation rock removal, hillside excavation, and boulder breaking. Blasting services available with proper licensing. Geotechnical assessments and site-specific excavation plans provided.",
     machinery: "Vibrorippers, Hydraulic rock breakers, Heavy excavators",
+    image: "/rock-breaking-construction-machinery.jpg",
   },
   {
     id: 7,
@@ -70,6 +76,7 @@ const services = [
     details:
       "Complete site preparation for PEB installations including land clearing, excavation, levelling, compaction, and foundation works. We coordinate with PEB manufacturers for precise specifications. Services include drainage planning, approach road construction, and utility trenching. Soil testing and compaction certificates provided.",
     machinery: "Excavators, Bulldozers, Compactors, Graders",
+    image: "/industrial-site-preparation-peb.jpg",
   },
   {
     id: 8,
@@ -79,6 +86,7 @@ const services = [
     details:
       "Ongoing site maintenance services including debris removal, site clearing, soil compaction, temporary road construction, and material handling. We provide regular equipment for long-term projects. Services include dust suppression, site security support, and waste management. Flexible scheduling to match project timelines.",
     machinery: "Mini excavators, Skid loaders, Compactors, Dumpers",
+    image: "/construction-site-cleaning-maintenance.jpg",
   },
   {
     id: 9,
@@ -88,6 +96,7 @@ const services = [
     details:
       "Comprehensive transport services including 10-12 wheel tippers, trailers, water tankers, and transit mixers. We handle material movement within sites and inter-city transport. GPS-enabled vehicles ensure tracking and timely delivery. Regular maintenance and certified drivers ensure safety and reliability.",
     machinery: "10-12 wheel tippers, Trailers, Water tankers, Transit mixers",
+    image: "/construction-transport-trucks.jpg",
   },
   {
     id: 10,
@@ -97,6 +106,7 @@ const services = [
     details:
       "Sourcing and delivery of quality building materials including murum, sand, aggregates (various grades), boulders, and soil. Materials tested for quality and compliance. Bulk supply options with competitive pricing. Direct delivery to site with proper documentation. Partnerships with quarries ensure consistent availability.",
     machinery: "Tippers for delivery, Loading equipment",
+    image: "/construction-materials-sand-aggregates.jpg",
   },
 ]
 
@@ -135,7 +145,7 @@ export default function ServicesPage() {
                   <p className="text-muted-foreground leading-relaxed mb-4">{service.summary}</p>
                   <Button
                     variant="outline"
-                    className="w-full border-navy text-navy hover:bg-navy hover:text-white bg-transparent"
+                    className="w-full border-navy text-black hover:bg-navy hover:text-[#f59e0b] bg-transparent"
                     onClick={() => setSelectedService(service)}
                   >
                     Learn More
@@ -161,9 +171,9 @@ export default function ServicesPage() {
           </div>
 
           <div
-            className="w-full aspect-video rounded-lg bg-cover bg-center mt-4"
+            className="w-full aspect-video rounded-lg bg-cover bg-center mt-4 border border-navy/10"
             style={{
-              backgroundImage: "url(/placeholder.svg?height=400&width=600&query=construction+machinery+at+work)",
+              backgroundImage: `url(${selectedService?.image || "/construction-machinery.jpg"})`,
             }}
           />
         </DialogContent>

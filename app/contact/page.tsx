@@ -121,7 +121,7 @@ export default function ContactPage() {
                     <Mail className="w-6 h-6 text-yellow flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="font-bold text-navy mb-1">Email</h3>
-                      <p className="text-muted-foreground">bababconstruction300@gmail.com</p>
+                      <p className="text-muted-foreground">bababconstruction30@gmail.com</p>
                     </div>
                   </div>
                 </Card>
@@ -131,8 +131,7 @@ export default function ContactPage() {
                     <Clock className="w-6 h-6 text-yellow flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="font-bold text-navy mb-1">Office Hours</h3>
-                      <p className="text-muted-foreground">Monday - Saturday: 9:00 AM - 6:00 PM</p>
-                      <p className="text-muted-foreground">Sunday: Closed</p>
+                      <p className="text-muted-foreground">Monday - Sunday: 9:00 AM - 6:00 PM</p>
                     </div>
                   </div>
                 </Card>
